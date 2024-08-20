@@ -16,6 +16,7 @@
                 <div>
                     <strong>{{ tarefa.titulo }}</strong>
                     <p>{{ tarefa.descricao }}</p>
+                    <p>Data: {{ tarefa.data }}</p>
                 </div>
                 <div class="actions">
                     <form method="POST" action="{{ url_for('concluir_tarefa', id=tarefa.id) }}">
