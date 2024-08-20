@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tarefas Concluídas</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Tarefas Concluídas</h1>
+        <ul class="task-list">
+            {% for tarefa in tarefas %}
+            <li>
+                <div>
+                    <strong>{{ tarefa.titulo }}</strong>
+                    <p>{{ tarefa.descricao }}</p>
+                    <p>Concluída em: {{ tarefa.data }}</p>
+                </div>
+            </li>
+            {% endfor %}
+        </ul>
+        <a href="{{ url_for('index') }}">Voltar</a>
+    </div>
+</body>
+</html>

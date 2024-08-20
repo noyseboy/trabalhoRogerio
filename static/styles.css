@@ -1,3 +1,4 @@
+/* Estilo base */
 body {
     font-family: Arial, sans-serif;
     background-color: #f4f4f4;
@@ -18,12 +19,14 @@ h1 {
     color: #333;
 }
 
+/* Estilo para formulários */
 form {
     margin: 20px 0;
 }
 
 form input[type="text"],
-form textarea {
+form textarea,
+form input[type="date"] {
     width: 100%;
     padding: 10px;
     margin: 10px 0;
@@ -44,6 +47,7 @@ form button:hover {
     background-color: #218838;
 }
 
+/* Estilo para a lista de tarefas */
 .task-list {
     list-style: none;
     padding: 0;
@@ -59,6 +63,11 @@ form button:hover {
     align-items: center;
 }
 
+.task-list .actions {
+    display: flex;
+    align-items: center;
+}
+
 .task-list a {
     color: #007bff;
     text-decoration: none;
@@ -69,15 +78,11 @@ form button:hover {
     text-decoration: underline;
 }
 
-.task-list .actions {
-    display: flex;
-    align-items: center;
-}
-
-.task-list .actions a {
-    margin-left: 10px;
-}
-
 .task-list .actions a.delete {
-    color: #dc3545;
+    color: #dc3545;
+}
+
+.task-list .actions input[type="checkbox"] {
+    margin-right: 10px;
+    cursor: pointer;
 }

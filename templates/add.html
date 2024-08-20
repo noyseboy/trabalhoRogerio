@@ -12,6 +12,11 @@
         <form method="POST">
             <input type="text" name="titulo" placeholder="Título" required>
             <textarea name="descricao" placeholder="Descrição"></textarea>
+            <input type="date" name="data" required>
+            <label>
+                <!--<input type="checkbox" name="concluida">
+                Concluída-->
+            </label>
             <button type="submit">Adicionar Tarefa</button>
         </form>
         <a href="{{ url_for('index') }}">Voltar</a>

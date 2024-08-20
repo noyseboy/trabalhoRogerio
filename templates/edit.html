@@ -12,6 +12,10 @@
         <form method="POST">
             <input type="text" name="titulo" value="{{ tarefa.titulo }}" required>
             <textarea name="descricao">{{ tarefa.descricao }}</textarea>
+            <input type="date" name="data" value="{{ tarefa.data }}"> <!-- Campo para editar a data -->
+            <label>
+               <!-- <input type="checkbox" name="concluida" {% if tarefa.concluida %}checked{% endif %}> Concluída
+            </label>-->
             <button type="submit">Atualizar Tarefa</button>
         </form>
         <a href="{{ url_for('index') }}">Voltar</a>

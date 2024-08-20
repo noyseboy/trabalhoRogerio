@@ -18,12 +18,19 @@
                     <p>{{ tarefa.descricao }}</p>
                 </div>
                 <div class="actions">
+                    <form method="POST" action="{{ url_for('concluir_tarefa', id=tarefa.id) }}">
+                        <label>
+                            <input type="checkbox" name="concluida" onchange="this.form.submit()" {% if tarefa.concluida %}checked{% endif %}> 
+                            Tarefa Concluída
+                        </label>
+                    </form>
                     <a href="{{ url_for('editar_tarefa', id=tarefa.id) }}">Editar</a>
                     <a href="{{ url_for('deletar_tarefa', id=tarefa.id) }}" class="delete">Deletar</a>
                 </div>
             </li>
             {% endfor %}
         </ul>
+        <a href="{{ url_for('lista_tarefas_concluidas') }}">Ver Tarefas Concluídas</a>
     </div>
 </body>
 </html>
